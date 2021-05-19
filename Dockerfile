@@ -23,9 +23,9 @@ RUN chmod g+rwx /opt/tomcat/bin
 RUN chmod g+r /opt/tomcat/bin/*
 
 RUN rm -rf /opt/tomcat/webapps/*
-RUN cd /tmp && git clone https://github.com/Hareesh5041/CI-CD-using-Docker.git
-RUN cd /tmp/CI-CD-using-Docker && mvn clean install
-RUN cp /tmp/CI-CD-using-Docker/target/LoginWebApp-1.war /opt/tomcat/webapps/ROOT.war
+RUN cd /tmp && git clone https://github.com/Hareesh5041/HCLCowin.git
+RUN cd /tmp/HCLCowin && mvn clean install
+RUN cp /tmp/HCLCowin/target/HCLCowin-0.0.1-SNAPSHOT.war /opt/tomcat/webapps/ROOT.war
 RUN chmod 777 /opt/tomcat/webapps/ROOT.war
 
 VOLUME /opt/tomcat/webapps
